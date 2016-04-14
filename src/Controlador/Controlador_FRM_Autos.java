@@ -27,7 +27,7 @@ public Controlador_FRM_Autos(FRM_Autos Autos)
 
 public void actionPerformed(ActionEvent e)
 {
-    if(e.getActionCommand().equals("Consultar"))
+    if(e.getActionCommand().equals("Buscar"))
     {
         buscar();
     }
@@ -55,7 +55,7 @@ public void actionPerformed(ActionEvent e)
     {
       if(metodos.consultarAuto(this.Autos.devolverRegistro()))
       {
-          System.out.println("Entró");
+        
           this.Autos.mostrarInformacion(metodos.getArregloInformacion());
           this.Autos.habilitarOpciones();
           this.Autos.deshabilitarRegistro();
@@ -63,7 +63,7 @@ public void actionPerformed(ActionEvent e)
       }
       else
       {
-          System.out.println("Entró");
+         
           this.Autos.mostrarMensaje("El vehiculo aún no ha sido registrado.");
           this.Autos.habilitarAgregar();
       }  
